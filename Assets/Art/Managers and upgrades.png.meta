@@ -1,0 +1,2049 @@
+fileFormatVersion: 2
+guid: 144300709f0f879408fc90b4106023b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -9072289296139460833
+    second: Manager_1
+  - first:
+      213: -4776543348737569917
+    second: Manager_2
+  - first:
+      213: -1690788415460509455
+    second: Manager_3
+  - first:
+      213: 8878804931570044248
+    second: Manager_4
+  - first:
+      213: 4558931313843447340
+    second: Manager_5
+  - first:
+      213: -5489064569745631460
+    second: Manager_6
+  - first:
+      213: -4769596966837668722
+    second: Blaster_1
+  - first:
+      213: 9210103493499513248
+    second: Blaster_2
+  - first:
+      213: -1606557581644971486
+    second: Blaster_3
+  - first:
+      213: -8984537125507019720
+    second: Blaster_4
+  - first:
+      213: -2274371472346475345
+    second: Blaster_5
+  - first:
+      213: -2785577794981990396
+    second: Manager_7
+  - first:
+      213: -5816766671069748539
+    second: Manager_8
+  - first:
+      213: -8033551590430715232
+    second: Manager_9
+  - first:
+      213: -4738027740986574237
+    second: Manager_10
+  - first:
+      213: -7480374429000825724
+    second: Manager_11
+  - first:
+      213: -113475102942294575
+    second: Manager_12
+  - first:
+      213: -2120736070927482547
+    second: Stick_1
+  - first:
+      213: -6379344409900553748
+    second: Stick_2
+  - first:
+      213: -8203422604325148938
+    second: Stick_3
+  - first:
+      213: -3572902511387050885
+    second: Stick_4
+  - first:
+      213: -5107328252190993471
+    second: Stick_5
+  - first:
+      213: -3166863334220830162
+    second: Manager_13
+  - first:
+      213: -7260205234430821961
+    second: Manager_14
+  - first:
+      213: -6673905687466355731
+    second: Manager_15
+  - first:
+      213: 6629020951596043616
+    second: Manager_16
+  - first:
+      213: 621990456651681089
+    second: Manager_17
+  - first:
+      213: 2249063925384504119
+    second: Manager_18
+  - first:
+      213: -6492476722227787461
+    second: Helmet_1
+  - first:
+      213: -862436429288396067
+    second: Helmet_2
+  - first:
+      213: 2052024539347452602
+    second: Helmet_3
+  - first:
+      213: -761194614758592713
+    second: Helmet_4
+  - first:
+      213: 8352561086929705713
+    second: Helmet_5
+  - first:
+      213: -3818894746389213117
+    second: Manager_19
+  - first:
+      213: -3884291109365592116
+    second: Manager_20
+  - first:
+      213: -7812460715114870524
+    second: Manager_21
+  - first:
+      213: 2935281215501605182
+    second: Manager_22
+  - first:
+      213: -3517204234708581174
+    second: Manager_23
+  - first:
+      213: -8108581076272850746
+    second: Manager_24
+  - first:
+      213: -8197359415447864754
+    second: Manager_25
+  - first:
+      213: 2668606689422626421
+    second: Manager_26
+  - first:
+      213: 8946785821175880994
+    second: Manager_27
+  - first:
+      213: 1728992912022853336
+    second: Manager_28
+  - first:
+      213: -4104311649671533985
+    second: Manager_29
+  - first:
+      213: 5097346904851273934
+    second: Manager_30
+  - first:
+      213: 4714410783012859700
+    second: Chest_1
+  - first:
+      213: -4685547431992939551
+    second: Chest_2
+  - first:
+      213: 8985439187258846068
+    second: Chest_3
+  - first:
+      213: -5279824056886119778
+    second: Chest_4
+  - first:
+      213: 826535257128478662
+    second: Chest_5
+  - first:
+      213: -3113520530484580786
+    second: Makkan
+  - first:
+      213: 9181034661916361366
+    second: Margrethe
+  - first:
+      213: -8919208680820184676
+    second: Moya
+  - first:
+      213: -7779158670215386926
+    second: 1
+  - first:
+      213: 8944122749208638690
+    second: 3
+  - first:
+      213: -7947067082740497745
+    second: Shield_1
+  - first:
+      213: -4098029715399502762
+    second: Shield_2
+  - first:
+      213: -407368442477547055
+    second: Shield_3
+  - first:
+      213: -8418880130915447063
+    second: Shield_4
+  - first:
+      213: -7904321528907490436
+    second: Shield_5
+  - first:
+      213: 683520168947253234
+    second: Riddick
+  - first:
+      213: 3245080388730992707
+    second: Rinya
+  - first:
+      213: -3864482298153897734
+    second: Rygel
+  - first:
+      213: 4665514343601912674
+    second: 2
+  - first:
+      213: -1054797784645801728
+    second: 4
+  - first:
+      213: -4195582761621981391
+    second: Heart_1
+  - first:
+      213: 516283494600122218
+    second: Heart_2
+  - first:
+      213: 7630354458230478893
+    second: Heart_3
+  - first:
+      213: 615023859997206797
+    second: Heart_4
+  - first:
+      213: -3650377147373918042
+    second: Heart_5
+  - first:
+      213: -1495120884200918762
+    second: Green_Monster_4
+  - first:
+      213: 4656807772109464436
+    second: Blue_Monster_6
+  - first:
+      213: 5432788793692081491
+    second: Blue_Monster_5
+  - first:
+      213: 149723484030608645
+    second: Blue_Monster_4
+  - first:
+      213: 6027278894051158590
+    second: Green_Monster_5
+  - first:
+      213: -4832498555449426856
+    second: Green_Monster_6
+  - first:
+      213: -1231219331237527547
+    second: 1
+  - first:
+      213: -9198617833554268923
+    second: 2
+  - first:
+      213: -150232915115860552
+    second: 3
+  - first:
+      213: -1872231927679101370
+    second: 4
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Manager_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4904
+        width: 310
+        height: 372
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6bd67094f73c844a2de09200aa908b
+      internalID: -9072289296139460833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_2
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 4904
+        width: 286
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bae6eb7dfb0212b488cfa8b742a1519a
+      internalID: -4776543348737569917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_3
+      rect:
+        serializedVersion: 2
+        x: 978
+        y: 4904
+        width: 301
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6f373a765d31e14da581eaa4fd090f1
+      internalID: -1690788415460509455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_4
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 4883
+        width: 286
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3de61238d28f07e4d95ef96c6cd3cef3
+      internalID: 8878804931570044248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_5
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 4870
+        width: 286
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3017afe20ba5e447a3cef8a32d77b8c
+      internalID: 4558931313843447340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_6
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 4883
+        width: 286
+        height: 296
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c283c8180a8e70043baec514c66b8a15
+      internalID: -5489064569745631460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blaster_1
+      rect:
+        serializedVersion: 2
+        x: 3093
+        y: 4924
+        width: 363
+        height: 266
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8656a1972035bb54cb9c8d17c1701283
+      internalID: -4769596966837668722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blaster_2
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 4927
+        width: 360
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5147dceb69f9e4c8c5c56683cc9cad
+      internalID: 9210103493499513248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blaster_3
+      rect:
+        serializedVersion: 2
+        x: 3980
+        y: 4930
+        width: 360
+        height: 265
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 234a60d409c38db48a223f0cb89bbd57
+      internalID: -1606557581644971486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blaster_4
+      rect:
+        serializedVersion: 2
+        x: 4451
+        y: 4930
+        width: 361
+        height: 346
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd599812d7bd95b41a0f3c80c53df243
+      internalID: -8984537125507019720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blaster_5
+      rect:
+        serializedVersion: 2
+        x: 4889
+        y: 4930
+        width: 357
+        height: 267
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73aeeed72682e6048a446c37ed0a5724
+      internalID: -2274371472346475345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_7
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 4489
+        width: 286
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702f9e20ac2ea664489850b628a92624
+      internalID: -2785577794981990396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_8
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 4489
+        width: 325
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5a978a30005a7458053c5e1ec640ce
+      internalID: -5816766671069748539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_9
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 4489
+        width: 345
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aaa7ccf714e1ef48a97655c6cc464f3
+      internalID: -8033551590430715232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_10
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 4461
+        width: 337
+        height: 316
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57525cc374d0d6b419b9d68a5856bb88
+      internalID: -4738027740986574237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_11
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 4469
+        width: 335
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a225a2918e6526a48be781bd95d1fec4
+      internalID: -7480374429000825724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_12
+      rect:
+        serializedVersion: 2
+        x: 2351
+        y: 4469
+        width: 339
+        height: 314
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7ff7d12f13b34479d5a958e1d53ca4
+      internalID: -113475102942294575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stick_1
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 4421
+        width: 240
+        height: 310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e83887ca3c64b44be3a82272e4dfba
+      internalID: -2120736070927482547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stick_2
+      rect:
+        serializedVersion: 2
+        x: 3596
+        y: 4417
+        width: 242
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2e976008ecacb45ae78beb30bb672f
+      internalID: -6379344409900553748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stick_3
+      rect:
+        serializedVersion: 2
+        x: 4036
+        y: 4430
+        width: 242
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef861b3e85851b340910e46bb1b167b7
+      internalID: -8203422604325148938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stick_4
+      rect:
+        serializedVersion: 2
+        x: 4513
+        y: 4425
+        width: 240
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ef04ace39c934479ee5ebbf1aa42ef
+      internalID: -3572902511387050885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Stick_5
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 4425
+        width: 243
+        height: 309
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 947060ff9636d0b4493af0a3a52dbc60
+      internalID: -5107328252190993471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_13
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 4115
+        width: 303
+        height: 306
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6449084366f0f254fbae28af5162e749
+      internalID: -3166863334220830162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_14
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 4115
+        width: 310
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a202a864409d95a4398b0d50e68ad596
+      internalID: -7260205234430821961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_15
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 4115
+        width: 309
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5064a6c990c8e24a8e7ac0a52bde31b
+      internalID: -6673905687466355731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_16
+      rect:
+        serializedVersion: 2
+        x: 1403
+        y: 4095
+        width: 281
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6fcb5bdd979604f83e5bc6076649bf
+      internalID: 6629020951596043616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_17
+      rect:
+        serializedVersion: 2
+        x: 1885
+        y: 4095
+        width: 281
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2388166bf127485478e5907facd90ac6
+      internalID: 621990456651681089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_18
+      rect:
+        serializedVersion: 2
+        x: 2356
+        y: 4095
+        width: 283
+        height: 299
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9c24b5fc3a72542b5cca5d7f8cc297
+      internalID: 2249063925384504119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helmet_1
+      rect:
+        serializedVersion: 2
+        x: 3155
+        y: 3948
+        width: 224
+        height: 276
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae8fca543458cb24c86ba74cafa42e1e
+      internalID: -6492476722227787461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helmet_2
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 3953
+        width: 225
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf55d056f0e9a40438d9e6f520edef4e
+      internalID: -862436429288396067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helmet_3
+      rect:
+        serializedVersion: 2
+        x: 4052
+        y: 3961
+        width: 225
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5707e8dd738b87f47ab1be315ca898e0
+      internalID: 2052024539347452602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helmet_4
+      rect:
+        serializedVersion: 2
+        x: 4490
+        y: 3969
+        width: 224
+        height: 275
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8cb84f3850f92e40999fc4b7ec862d0
+      internalID: -761194614758592713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Helmet_5
+      rect:
+        serializedVersion: 2
+        x: 4925
+        y: 3724
+        width: 321
+        height: 522
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d38f6d10be2e4d498c5b4b15792626a
+      internalID: 8352561086929705713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3678
+        width: 336
+        height: 300
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 936450fa057122e46a16b7751001df32
+      internalID: -3818894746389213117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_20
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 3678
+        width: 387
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54271a93ee493504e9237feb9440939a
+      internalID: -3884291109365592116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_21
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 3678
+        width: 373
+        height: 298
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b209773a3c1e0942aba80df8afdc782
+      internalID: -7812460715114870524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_22
+      rect:
+        serializedVersion: 2
+        x: 1400
+        y: 3659
+        width: 286
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49e905955d2a5e345a7ea2e19dc0420b
+      internalID: 2935281215501605182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_23
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 3659
+        width: 286
+        height: 369
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 414ca3c6f1be6e54ea103f14f4582641
+      internalID: -3517204234708581174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_24
+      rect:
+        serializedVersion: 2
+        x: 2354
+        y: 3659
+        width: 286
+        height: 348
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bb727977ecea964aa8f8ac83547f1d0
+      internalID: -8108581076272850746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_25
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 3281
+        width: 309
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deaa91317a7ade0439046ac29f9dc945
+      internalID: -8197359415447864754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_26
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 3281
+        width: 308
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f998842e3626097469dc83442b03d4e8
+      internalID: 2668606689422626421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_27
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 3281
+        width: 309
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1332c346d1732d4484ba2830deb0b40
+      internalID: 8946785821175880994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_28
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 3260
+        width: 311
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2624f3c55b9166340b90fa2091e16056
+      internalID: 1728992912022853336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_29
+      rect:
+        serializedVersion: 2
+        x: 1869
+        y: 3260
+        width: 312
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95bcc23091ce78c49bcfd27af22492a3
+      internalID: -4104311649671533985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Manager_30
+      rect:
+        serializedVersion: 2
+        x: 2341
+        y: 3260
+        width: 312
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b851eeccbc782854b8ed187d01cabb9d
+      internalID: 5097346904851273934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest_1
+      rect:
+        serializedVersion: 2
+        x: 3104
+        y: 3270
+        width: 342
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3647f837934f02c42acee18b68bd8c66
+      internalID: 4714410783012859700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest_2
+      rect:
+        serializedVersion: 2
+        x: 3524
+        y: 3265
+        width: 342
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd5e9029fd7e9c45ab2e3da6fd7ffce
+      internalID: -4685547431992939551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest_3
+      rect:
+        serializedVersion: 2
+        x: 3995
+        y: 3270
+        width: 343
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20b3ed528e060b4589de03975fa19c1
+      internalID: 8985439187258846068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest_4
+      rect:
+        serializedVersion: 2
+        x: 4443
+        y: 3271
+        width: 340
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e970c798dd5785479d210655ad3739b
+      internalID: -5279824056886119778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chest_5
+      rect:
+        serializedVersion: 2
+        x: 4879
+        y: 3271
+        width: 342
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d563337d7cbee24596460f3d9f8f4f6
+      internalID: 826535257128478662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Makkan
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 2395
+        width: 325
+        height: 363
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95c9af1aef365f48a4f86c7c5a2c638
+      internalID: -3113520530484580786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Margrethe
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 2395
+        width: 327
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 059e3e5f02c9c404f9867ae4c865f8fb
+      internalID: 9181034661916361366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Moya
+      rect:
+        serializedVersion: 2
+        x: 854
+        y: 2387
+        width: 415
+        height: 376
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9d950ccaa575844adcb116a8b7bf11
+      internalID: -8919208680820184676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zoe
+      rect:
+        serializedVersion: 2
+        x: 1478
+        y: 2350
+        width: 474
+        height: 477
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eecb8ead0a9f3a548904b28e5c2ca1a5
+      internalID: -7779158670215386926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zorg
+      rect:
+        serializedVersion: 2
+        x: 2143
+        y: 2328
+        width: 327
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b8ae30c59688c947ac3cd068a3a304d
+      internalID: 8944122749208638690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield_1
+      rect:
+        serializedVersion: 2
+        x: 3173
+        y: 2510
+        width: 224
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c44a35d3fd197f47a31153606df1c0f
+      internalID: -7947067082740497745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield_2
+      rect:
+        serializedVersion: 2
+        x: 3585
+        y: 2523
+        width: 222
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f2fff254d437d4d92bae62376a8842
+      internalID: -4098029715399502762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield_3
+      rect:
+        serializedVersion: 2
+        x: 4075
+        y: 2530
+        width: 221
+        height: 272
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3df75433e08db408484d2c74c2cc94
+      internalID: -407368442477547055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield_4
+      rect:
+        serializedVersion: 2
+        x: 4531
+        y: 2536
+        width: 222
+        height: 271
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81ed7bf9c5fa96f4197897319d798201
+      internalID: -8418880130915447063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shield_5
+      rect:
+        serializedVersion: 2
+        x: 4967
+        y: 2536
+        width: 223
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9cce9e925bb4ba43a887cef33deecc1
+      internalID: -7904321528907490436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Riddick
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 1901
+        width: 237
+        height: 486
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52dc8837375a2774f95414ed58cbe1fa
+      internalID: 683520168947253234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rinya
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 1896
+        width: 297
+        height: 444
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa00843079ae20d4085b6e48ad0193dd
+      internalID: 3245080388730992707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rygel
+      rect:
+        serializedVersion: 2
+        x: 916
+        y: 1897
+        width: 327
+        height: 418
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e9190515587834b887075d08d1a1c5
+      internalID: -3864482298153897734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zhora
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 1917
+        width: 350
+        height: 411
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb53f487add84e499a0454e16a10ae5
+      internalID: 4665514343601912674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Zalga
+      rect:
+        serializedVersion: 2
+        x: 2068
+        y: 1856
+        width: 541
+        height: 415
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9082d79bffe6145b2bd580a048cef4
+      internalID: -1054797784645801728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_1
+      rect:
+        serializedVersion: 2
+        x: 3196
+        y: 1946
+        width: 191
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea2a76099f780444bafb7eedbdf19e6
+      internalID: -4195582761621981391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_2
+      rect:
+        serializedVersion: 2
+        x: 3621
+        y: 1944
+        width: 191
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95f1bd9b6120a664bb0b554f4083de56
+      internalID: 516283494600122218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_3
+      rect:
+        serializedVersion: 2
+        x: 4091
+        y: 1936
+        width: 193
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c5036dea4bbae34abaeddfe5cfc62f2
+      internalID: 7630354458230478893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_4
+      rect:
+        serializedVersion: 2
+        x: 4549
+        y: 1931
+        width: 191
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa7dad8230af6b4e972a51f8e721278
+      internalID: 615023859997206797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_5
+      rect:
+        serializedVersion: 2
+        x: 4984
+        y: 1933
+        width: 193
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c132ce8c04494446ab86688e142eb9b
+      internalID: -3650377147373918042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Monster_4
+      rect:
+        serializedVersion: 2
+        x: 1777
+        y: 712
+        width: 237
+        height: 485
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133932526818f574c90f6dbbed0d91e9
+      internalID: -1495120884200918762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Monster_6
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 733
+        width: 412
+        height: 698
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 583129b71025b034cb23c29bb2073009
+      internalID: 4656807772109464436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Monster_5
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 470
+        width: 337
+        height: 879
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985d756631335954ea61a355fc5f153f
+      internalID: 5432788793692081491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blue_Monster_4
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 411
+        width: 322
+        height: 953
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef222d6f75093a4eb2d0084ad9dadd2
+      internalID: 149723484030608645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Monster_5
+      rect:
+        serializedVersion: 2
+        x: 2195
+        y: 380
+        width: 300
+        height: 1011
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddf4c86ee7df99b4aacaf2ddaa7bc10b
+      internalID: 6027278894051158590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Green_Monster_6
+      rect:
+        serializedVersion: 2
+        x: 2601
+        y: 300
+        width: 327
+        height: 1061
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb08e91dd524f44a9546e71fb68d721
+      internalID: -4832498555449426856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 3021
+        y: 305
+        width: 480
+        height: 1139
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43ec5686d0294444aa68cc4a6d16bad7
+      internalID: -1231219331237527547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 3541
+        y: 326
+        width: 367
+        height: 1054
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de6badea9f27deb4292ee3e5e34a75d0
+      internalID: -9198617833554268923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 3992
+        y: 318
+        width: 343
+        height: 1088
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5a9dc240520874c8d631a49fa41e54
+      internalID: -150232915115860552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 4534
+        y: 0
+        width: 507
+        height: 1310
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed940c7e4ec8154da539f6b92d99337
+      internalID: -1872231927679101370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

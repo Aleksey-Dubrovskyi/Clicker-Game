@@ -10,6 +10,7 @@ public enum DamageType
 public class Shop : MonoBehaviour
 {
     public DamageType damageType;
+    public static Shop instance;
     [SerializeField]
     private GameObject ShopWindow;
     private Animator shopAnim;
@@ -17,13 +18,15 @@ public class Shop : MonoBehaviour
     private bool x1, x25, x50, x100, max;
     [SerializeField]
     private Text clickDamage;
+    public Text autoDamage;
     [SerializeField]
-    private Text autoDamage;
-    [SerializeField]
+    [Header("Blaster section")]
     private Text blasterDamageText;
     [SerializeField]
     private Text amountOfUpgrades;
     private int blasterLvl;
+    [SerializeField]
+    private Text blasterLvlText;
     [SerializeField]
     private int blasterPrice;
     [SerializeField]
@@ -37,22 +40,29 @@ public class Shop : MonoBehaviour
     [SerializeField]
     private GameObject managerSection;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     // Start is called before the first frame update
     private void Start()
     {
         shopAnim = ShopWindow.GetComponent<Animator>();
         x1 = false; x25 = true; x50 = true; x100 = true; max = true;
+        blasterLvlText.text = "LVL: " + GameData.instance.saveData.blasterLvl.ToString();
         ManagerInstantiation();
         if (DamageManager.instance != null)
         {
-            clickDamage.text = DamageManager.instance.clickDamage.ToString() + "Click damage";
-            autoDamage.text = DamageManager.instance.autoDamage.ToString() + "DPS";
+            clickDamage.text = GameData.instance.saveData.clickDamage.ToString() + "Click damage";
+            autoDamage.text = GameData.instance.saveData.autoDamage.ToString() + "DPS";
             blasterLvl = GameData.instance.saveData.blasterLvl;
             GameData.instance.saveData.blasterDamage = blasterLvl;
             blasterDamageText.text = GameData.instance.saveData.blasterDamage.ToString();
             blasterPrice = GameData.instance.saveData.blasterPrice;
             blasterPriceText.text = blasterPrice.ToString();
         }
+
         if (blasterLvl <= 0)
         {
             blasterButtonText.text = "Buy";
@@ -67,10 +77,6 @@ public class Shop : MonoBehaviour
     public void OnShop()
     {
         CheckForInteractable();
-        if (DamageManager.instance.autoDamage > 0)
-        {
-            DamageManager.instance.AutoDamage();
-        }
         if (isOpen == false)
         {
             shopAnim.SetBool("Out", true);
@@ -96,20 +102,26 @@ public class Shop : MonoBehaviour
 
     public void BlasterUpgrade(int ammountOfUpgrades)
     {
+        float percentToAdd = 0;
         blasterButtonText.text = "Upgrade";
         blasterLvl += 1 * ammountOfUpgrades;
+        blasterLvlText.text = "LVL: " + blasterLvl.ToString();
         blasterPrice *= ammountOfUpgrades;
         GameManager.instance.coins -= blasterPrice;
         GameData.instance.saveData.coins = GameManager.instance.coins;
         blasterPrice = GameData.instance.saveData.blasterPrice;
-        blasterPrice += (100/7) * ammountOfUpgrades;
+        for (int i = 0; i < ammountOfUpgrades; i++)
+        {
+            percentToAdd = ((float)blasterPrice / 100) * 7;
+            blasterPrice += Mathf.CeilToInt(percentToAdd);
+        }
         GameData.instance.saveData.blasterPrice = blasterPrice;
         blasterPriceText.text = GameData.instance.saveData.blasterPrice.ToString();
         GameData.instance.saveData.blasterDamage = blasterLvl;
         blasterDamageText.text = GameData.instance.saveData.blasterDamage.ToString();
         DamageManager.instance.clickDamage = GameData.instance.saveData.blasterDamage;
         GameData.instance.saveData.clickDamage = DamageManager.instance.clickDamage;
-        clickDamage.text = DamageManager.instance.clickDamage.ToString() + "Click damage";
+        clickDamage.text = DamageManager.instance.clickDamage.ToString() + " Click damage";
         DamageManager.instance.clickDamageInfo.text = GameData.instance.saveData.blasterDamage.ToString();
         GameData.instance.saveData.blasterLvl = blasterLvl;
     }
@@ -155,7 +167,7 @@ public class Shop : MonoBehaviour
         CheckForInteractable();
     }
 
-    private int AmountOfUpgrades()
+    public int AmountOfUpgrades()
     {
         if (!x25)
         {
@@ -209,9 +221,14 @@ public class Shop : MonoBehaviour
         foreach (var manager in Manager.instance.managers)
         {
             GameObject newManager = Instantiate(managerPrefab, managerSection.transform) as GameObject;
+            if (GameData.instance != null)
+            {
+                Manager.instance.LoadManagerInfo(managerNumber);
+            }
             Manager.instance.ColecktingManagerInfo(managerNumber);
+            Manager.instance.managerNumber = managerNumber;
             managerNumber++;
-        }
 
+        }
     }
 }

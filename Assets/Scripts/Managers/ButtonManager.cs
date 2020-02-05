@@ -14,10 +14,6 @@ public class ButtonManager : MonoBehaviour
 
     public void OnShop()
     {
-        if (DamageManager.instance.autoDamage > 0)
-        {
-            DamageManager.instance.AutoDamage();
-        }
         if (isOpen == false)
         {
             shopAnim.SetBool("Out", true);

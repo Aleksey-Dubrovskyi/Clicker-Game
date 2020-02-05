@@ -19,10 +19,9 @@ public class DamageManager : MonoBehaviour
     private GameObject damageTextPrefab;
     [SerializeField]
     private GameObject clickDamageTextContainer;
-    [SerializeField]
-    private Text autoDamageInfo;
+    public Text autoDamageInfo;
 
-    void Awake()
+    private void Awake()
     {
         instance = this;
     }

@@ -22,8 +22,8 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 676, y: 442}
-  m_MaxSize: {x: 12003, y: 8042}
+  m_MinSize: {x: 679, y: 442}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
   controlID: -1
 --- !u!114 &2
@@ -204,9 +204,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.7109771, y: -16.77416, z: -13.339446}
+    m_Target: {x: -1.0806315, y: -16.17405, z: 105.02749}
     speed: 2
-    m_Value: {x: 0.7109771, y: -16.77416, z: -13.339446}
+    m_Value: {x: -1.0806315, y: -16.17405, z: 105.02749}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -256,9 +256,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.734842
+    m_Target: 5.8079987
     speed: 2
-    m_Value: 5.734842
+    m_Value: 5.8079987
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -381,10 +381,10 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: d648854c1cce98647b70b9ff11cfe0ab,
+  m_AnimatorController: {fileID: 9100000, guid: 4df20b616009647459e5fd7a142d8b40,
     type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -1235740268805675162, guid: d648854c1cce98647b70b9ff11cfe0ab,
+  - m_Target: {fileID: -8667306437175904984, guid: 4df20b616009647459e5fd7a142d8b40,
       type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
@@ -445,10 +445,10 @@ MonoBehaviour:
     y: 0
     width: 491
     height: 947
-  m_MinSize: {x: 200, y: 321}
+  m_MinSize: {x: 202, y: 321}
   m_MaxSize: {x: 4002, y: 8021}
   vertical: 1
-  controlID: 129
+  controlID: 20046
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -468,8 +468,8 @@ MonoBehaviour:
     y: 0
     width: 491
     height: 426
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
@@ -503,10 +503,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 128}
-      m_SelectedIDs: 6a360000
-      m_LastClickedID: 13930
-      m_ExpandedIDs: aeebfeffa60fffff1a4dffff5e54ffff265affff745affffc25affff6260ffff8460fffff46bffff166cffff4077ffff6277ffff067dffffc88bffff54fbfffff4ffffff3c37000056370000ac370000ec370000
+      scrollPos: {x: 0, y: 272}
+      m_SelectedIDs: 78360000
+      m_LastClickedID: 13944
+      m_ExpandedIDs: 0e43ffff18a9ffff2efbfffff4ffffff6e3600009c360000a6360000c6360000fc36000032370000663700007a370000823700008c370000e437000024380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -622,21 +622,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab
+    - Assets/Scripts/Game object
     m_Globs: []
   m_ViewMode: 1
   m_StartGridSize: 62
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Scripts/Game object
   m_LastFoldersGridSize: 62
   m_LastProjectPath: B:\unity projects\Clicker 2D Example
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a3a0000
-    m_LastClickedID: 14858
-    m_ExpandedIDs: 000000009e390000a0390000a2390000a4390000a639000000ca9a3b
+    m_SelectedIDs: 303a0000
+    m_LastClickedID: 14896
+    m_ExpandedIDs: 00000000ba390000bc390000be39000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -664,7 +664,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e390000a0390000a2390000a4390000a6390000
+    m_ExpandedIDs: 00000000ba390000bc390000be39000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -689,8 +689,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 78360000
+    m_LastClickedInstanceID: 13944
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007a490000d833000014470000a04d0000945100009a510000a05100003a3e000006340000e4310000d6330000de340000723800005e4a0000d237000014340000023d0000f43d00007433000000330000fc320000fa320000ee320000f032000072340000302201002a2201006e39000060390000e2340000403500001e35000052350000f436000058370000823800000000000070380000
     m_RenameOverlay:
@@ -708,7 +708,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 11}
+      m_ClientGUIView: {fileID: 14}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -739,8 +739,8 @@ MonoBehaviour:
     y: 0
     width: 561
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}

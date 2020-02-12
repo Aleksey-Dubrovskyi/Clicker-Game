@@ -8,12 +8,10 @@ public class DamageManager : MonoBehaviour
     public World world;
     public int clickDamage;
     public int autoDamage;
-    private int enemyHP;
-    private int damageTaked;
-    [SerializeField]
-    private Image hPBar;
-    [SerializeField]
-    private Text hPText;
+    public int enemyHP;
+    public int damageTaked;    
+    public Image hPBar;
+    public Text hPText;
     public Text clickDamageInfo;
     [SerializeField]
     private GameObject damageTextPrefab;
@@ -68,11 +66,6 @@ public class DamageManager : MonoBehaviour
             hPBar.fillAmount = 0;
             GameManager.instance.GenerateNewEnemy();
             GameManager.instance.EnemyKiled();
-            if (!GameData.instance.saveData.lvlCompleted[GameManager.instance.levelNumber])
-            {
-                GameData.instance.saveData.lvlCompleted[GameManager.instance.levelNumber] = true;
-
-            }
         }
     }
 
@@ -104,6 +97,7 @@ public class DamageManager : MonoBehaviour
                 damageTaked = 0;
                 hPBar.fillAmount = 0;
                 GameManager.instance.GenerateNewEnemy();
+                GameManager.instance.EnemyKiled();
             }
         }
     }

@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 1618043258422092098}
   - component: {fileID: 1618043258422092099}
   - component: {fileID: 1618043258422092097}
+  - component: {fileID: -2538439609757892701}
   m_Layer: 5
   m_Name: Planet prefab
   m_TagString: Untagged
@@ -197,4 +198,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1618043258422092099}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2538439609757892701}
+        m_TargetAssemblyTypeName: PlanetPrefab, Assembly-CSharp
+        m_MethodName: OnPlanetClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &-2538439609757892701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618043258422092125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e29525eb01549a46990afec08bcc0c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  planetNumberText: {fileID: 1618043257059227224}
+  planetSprite: {fileID: 0}
+  planetNumber: 0

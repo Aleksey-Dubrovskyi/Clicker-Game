@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 
 public enum Animations
 {
@@ -12,18 +13,26 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public World world;
+    IEnumerator timerCourutine;
     [Header("Level info")]
     public int levelNumber;
+    public int localLvlNumber;
+    float timeTokillBoss;
     [SerializeField]
     private bool lvlCompleted;
     [SerializeField]
     private int enemyNeeded;
-    [SerializeField]
-    private int enemyKiled;
+    public int enemyKiled;
     [SerializeField]
     private Text enemyKiledText;
     [SerializeField]
     private Image currentPlanetSprite;
+    [SerializeField]
+    private GameObject planetContainer;
+    [SerializeField]
+    private GameObject planetPrefab;
+    [SerializeField]
+    private Sprite[] planetSpriteList;
     [Header("Enemy info")]
     public int currentEnemyHP;
     [SerializeField]
@@ -41,36 +50,35 @@ public class GameManager : MonoBehaviour
     private Text coinText;
     public int coins;
     [SerializeField]
-    private int coinMultiply;
-    [SerializeField]
     private Animator coinAnimation;
 
     private void Awake()
     {
         instance = this;
         enemyNeeded = 10;
+        localLvlNumber = PlanetPrefab.instance.planetNumber;
         if (world != null)
         {
             if (world.levels[levelNumber] != null)
             {
-                currentEnemyHP = world.levels[levelNumber].levelInfo.enemyHP;
+                currentEnemyHP = Mathf.CeilToInt(10 * ((localLvlNumber - 1) + Mathf.Pow(1.55f, localLvlNumber - 1)));
                 currentPlanetSprite.sprite = world.levels[levelNumber].levelInfo.planetSprite;
             }
         }
     }
 
     private void Start()
-    {
+    {        
         if (GameData.instance != null)
         {
             coins = GameData.instance.saveData.coins;
-            enemyKiled = GameData.instance.saveData.kiledEnemys[levelNumber];
-            enemyKiledText.text = GameData.instance.saveData.kiledEnemys[levelNumber] + " / " + enemyNeeded;
+            enemyKiled = GameData.instance.saveData.kiledEnemys[localLvlNumber - 1];
+            enemyKiledText.text = GameData.instance.saveData.kiledEnemys[localLvlNumber - 1] + " / " + enemyNeeded;
         }
         coinText.text = coins.ToString();
-        enemy.sprite = EnemyViewGenerator();
-        enemyName.text = currentEnemySprite.name + ", lvl " + (levelNumber + 1);
+        StartNewPlanetInstantiation();
         GenerateNewEnemy();
+
     }
 
     private Sprite EnemyViewGenerator()
@@ -78,33 +86,95 @@ public class GameManager : MonoBehaviour
         return currentEnemySprite = world.levels[levelNumber].levelInfo.enemySprites[Random.Range(0, world.levels[levelNumber].levelInfo.enemySprites.Length)];
     }
 
+    private Sprite BossViewGenerator()
+    {
+        return currentEnemySprite = world.levels[levelNumber].levelInfo.levelBosses[Random.Range(0, world.levels[levelNumber].levelInfo.levelBosses.Length)];
+    }
+
     public void GenerateNewEnemy()
     {
-        enemyAnimation.Play(Animations.Enemy_appear.ToString());
-        teleportAnimation.Play(Animations.Teleportation.ToString());
-        enemy.sprite = EnemyViewGenerator();
-        enemyName.text = currentEnemySprite.name + ", lvl " + (levelNumber + 1);
         if (world != null)
         {
             if (world.levels[levelNumber] != null)
-            {
-                currentEnemyHP = world.levels[levelNumber].levelInfo.enemyHP;
-                currentPlanetSprite.sprite = world.levels[levelNumber].levelInfo.planetSprite;
+            {             
+                if (world.levels[levelNumber].levelInfo.enemyType == EnemyType.Usual)
+                {
+                    GenerateUsualEnemy();
+                }
+                else if (world.levels[levelNumber].levelInfo.enemyType == EnemyType.Boss)
+                {
+                    GenerateBoss();
+                }
+
                 if (lvlComplete())
                 {
-                    lvlCompleted = true;
-                    GameData.instance.saveData.lvlCompleted[levelNumber] = lvlCompleted;
+                    if (GameData.instance.saveData.lvlCompleted[localLvlNumber - 1] != true)
+                    {
+                        lvlCompleted = true;
+                        GameData.instance.saveData.lvlCompleted[localLvlNumber - 1] = lvlCompleted;
+                        NewPlanetInstantiation();
+                    }
                 }
             }
         }
     }
 
+    void GenerateUsualEnemy()
+    {        
+        StopCoroutine("BossCounterCo");
+        enemyKiledText.text = GameData.instance.saveData.kiledEnemys[localLvlNumber - 1] + " / " + enemyNeeded;
+        enemyAnimation.Play(Animations.Enemy_appear.ToString());
+        teleportAnimation.Play(Animations.Teleportation.ToString());
+        enemy.sprite = EnemyViewGenerator();
+        enemyName.text = currentEnemySprite.name + ", lvl " + (localLvlNumber);
+        currentEnemyHP = Mathf.CeilToInt(10 * ((localLvlNumber - 1) + Mathf.Pow(1.55f, localLvlNumber - 1)));
+        currentPlanetSprite.sprite = world.levels[levelNumber].levelInfo.planetSprite;
+        DamageManager.instance.enemyHP = currentEnemyHP;
+        DamageManager.instance.hPText.text = DamageManager.instance.enemyHP.ToString();
+        DamageManager.instance.damageTaked = 0;
+        DamageManager.instance.hPBar.fillAmount = 0;
+    }
+
+    void GenerateBoss()
+    {
+        timeTokillBoss = 30f;
+        enemyAnimation.Play(Animations.Enemy_appear.ToString());
+        teleportAnimation.Play(Animations.Teleportation.ToString());
+        enemy.sprite = BossViewGenerator();
+        enemyName.text = currentEnemySprite.name + ", lvl " + (localLvlNumber);
+        currentEnemyHP = Mathf.CeilToInt(10 * ((localLvlNumber - 1) + Mathf.Pow(1.55f, localLvlNumber - 1)) * 10);
+        DamageManager.instance.enemyHP = currentEnemyHP;
+        DamageManager.instance.hPText.text = DamageManager.instance.enemyHP.ToString();
+        DamageManager.instance.damageTaked = 0;
+        DamageManager.instance.hPBar.fillAmount = 0;
+        StartCoroutine("BossCounterCo");
+    }
+
+    private IEnumerator BossCounterCo()
+    {
+        float timer = 30f;
+        while (timer > 0)
+        {
+            yield return new WaitForEndOfFrame();
+            timer -= Time.deltaTime;
+            enemyKiledText.text = timer.ToString("0.00");
+            if (timer < 0)
+            {
+                GenerateNewEnemy();
+            }
+        }
+
+    }
+
     public void EarningCoins()
     {
-        coins += coinMultiply * (levelNumber + 1);
+        coins += Mathf.CeilToInt((float)currentEnemyHP / 15);
         GameData.instance.saveData.coins = coins;
         coinText.text = coins.ToString();
         coinAnimation.Play(Animations.Coin_Flip.ToString());
+        Shop.instance.CheckForInteractable();
+        Shop.instance.ManagerCheckForInteractable();
+        Shop.instance.PriceUpdate();
     }
 
     public void CoinsUpdate()
@@ -127,17 +197,48 @@ public class GameManager : MonoBehaviour
 
     public void EnemyKiled()
     {
-        if (enemyKiled < enemyNeeded)
+        enemyKiled = GameData.instance.saveData.kiledEnemys[localLvlNumber - 1];
+        if (world.levels[levelNumber].levelInfo.enemyType == EnemyType.Boss)
+        {
+            if (GameData.instance.saveData.lvlCompleted[localLvlNumber - 1] != true)
+            {
+                lvlCompleted = true;
+                GameData.instance.saveData.lvlCompleted[localLvlNumber - 1] = lvlCompleted;
+                NewPlanetInstantiation();
+            }
+        }
+        else if (enemyKiled < enemyNeeded)
         {
             enemyKiled++;
-            GameData.instance.saveData.kiledEnemys[levelNumber] = enemyKiled;
-            enemyKiledText.text = GameData.instance.saveData.kiledEnemys[levelNumber] + " / " + enemyNeeded;
+            GameData.instance.saveData.kiledEnemys[localLvlNumber - 1] = enemyKiled;
+            enemyKiledText.text = GameData.instance.saveData.kiledEnemys[localLvlNumber - 1] + " / " + enemyNeeded;
         }
         else
         {
             enemyKiled = enemyNeeded;
-            enemyKiledText.text = GameData.instance.saveData.kiledEnemys[levelNumber] + " / " + enemyNeeded;
+            enemyKiledText.text = GameData.instance.saveData.kiledEnemys[localLvlNumber - 1] + " / " + enemyNeeded;            
         }
 
+    }
+
+    private void StartNewPlanetInstantiation()
+    {
+        for (int i = 0; i < GameData.instance.saveData.lvlCompleted.Length; i++)
+        {
+            if (GameData.instance.saveData.lvlCompleted[i])
+            {
+                GameObject newPlanet = Instantiate(planetPrefab, planetContainer.transform);
+                newPlanet.GetComponent<PlanetPrefab>().planetNumber = GameData.instance.saveData.planetNumber[i];
+                newPlanet.GetComponent<PlanetPrefab>().planetSprite = planetSpriteList[levelNumber];
+            }
+        }
+    }
+
+    void NewPlanetInstantiation()
+    {
+        GameObject newPlanet = Instantiate(planetPrefab, planetContainer.transform);
+        newPlanet.GetComponent<PlanetPrefab>().planetNumber += localLvlNumber;
+        GameData.instance.saveData.planetNumber[localLvlNumber - 1] = newPlanet.GetComponent<PlanetPrefab>().planetNumber;
+        newPlanet.GetComponent<PlanetPrefab>().planetSprite = planetSpriteList[levelNumber];
     }
 }

@@ -12,14 +12,17 @@ public class SaveData
     public int blasterLvl;
     public int blasterPrice;
     public int blasterDamage;
+    public int currentLvl;
     //public bool[] blasterActiveUpgrades;
     public bool[] lvlCompleted;
     public bool[] activeManagers;
+    public int[] planetNumber;
     public int[] managerLvl;
     public int[] managerPrice;
     public int[] managerDamage;
     //public int[] managerUpgrades;
     public int[] kiledEnemys;
+    //public GameObject[] planetPrefab;
 }
 
 public class GameData : MonoBehaviour
@@ -81,11 +84,14 @@ public class GameData : MonoBehaviour
             saveData.clickDamage = 1;
             saveData.coins = 0;
             saveData.lvlCompleted = new bool[100];
+            saveData.planetNumber = new int[saveData.lvlCompleted.Length];
             //saveData.managerUpgrades = new int[100];
             saveData.blasterPrice = 5;
             saveData.managerPrice = new int[100];
             saveData.managerLvl = new int[100];
             saveData.managerDamage = new int[100];
+            saveData.currentLvl = 0;
+            //saveData.planetPrefab = new GameObject[100];
         }
     }
 }

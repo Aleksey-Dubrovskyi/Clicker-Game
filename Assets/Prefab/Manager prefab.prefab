@@ -732,8 +732,11 @@ MonoBehaviour:
       type: 3}
   managerName: {fileID: 7834121229772470357}
   managerLvl: {fileID: 2883399352716058492}
+  thisManagerLvl: 0
   managerDps: {fileID: 7834121229004124313}
+  thisManagerDPS: 0
   managerPrice: {fileID: 3026494449421562241}
+  thisManagerPrice: 0
   managerButtonText: {fileID: 7834121229445413206}
   managerButton: {fileID: 7834121229656087815}
   managerImage: {fileID: 7834121230124462336}

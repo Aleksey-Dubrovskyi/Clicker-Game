@@ -39,7 +39,7 @@ public class Shop : MonoBehaviour
     private GameObject managerPrefab;
     [SerializeField]
     private GameObject managerSection;
-
+    private GameObject[] managerArray;
     private void Awake()
     {
         instance = this;
@@ -51,6 +51,7 @@ public class Shop : MonoBehaviour
         shopAnim = ShopWindow.GetComponent<Animator>();
         x1 = false; x25 = true; x50 = true; x100 = true; max = true;
         blasterLvlText.text = "LVL: " + GameData.instance.saveData.blasterLvl.ToString();
+        managerArray = new GameObject[Manager.instance.managers.Length];
         ManagerInstantiation();
         if (DamageManager.instance != null)
         {
@@ -72,11 +73,13 @@ public class Shop : MonoBehaviour
             blasterButtonText.text = "Upgrade";
         }
         CheckForInteractable();
+        ManagerCheckForInteractable();
     }
 
     public void OnShop()
     {
         CheckForInteractable();
+        ManagerCheckForInteractable();
         if (isOpen == false)
         {
             shopAnim.SetBool("Out", true);
@@ -94,7 +97,7 @@ public class Shop : MonoBehaviour
         if (CheckForInteractable())
         {
             blasterButton.interactable = true;
-            BlasterUpgrade(AmountOfUpgrades());
+            BlasterUpgrade(AmountOfUpgrades(blasterPrice));
             GameManager.instance.CoinsUpdate();
             CheckForInteractable();
         }
@@ -126,9 +129,9 @@ public class Shop : MonoBehaviour
         GameData.instance.saveData.blasterLvl = blasterLvl;
     }
 
-    private bool CheckForInteractable()
+    public bool CheckForInteractable()
     {
-        if (GameManager.instance.coins >= blasterPrice * AmountOfUpgrades())
+        if (GameManager.instance.coins >= blasterPrice * AmountOfUpgrades(blasterPrice))
         {
             blasterButton.interactable = true;
             return true;
@@ -163,16 +166,22 @@ public class Shop : MonoBehaviour
         {
             x1 = true; x25 = false; x50 = true; x100 = true; max = true;
         }
-        AmountOfUpgrades();
+        PriceUpdate();
         CheckForInteractable();
+        ManagerCheckForInteractable();
     }
 
-    public int AmountOfUpgrades()
+    public void PriceUpdate()
+    {
+        BlasterPriceOfupdate();
+        ManagerAmountOfUpgrades();
+    }
+
+    public int AmountOfUpgrades(int unitPrcie)
     {
         if (!x25)
         {
             //x1 = true; x25 = true; x50 = false; x100 = true; max = true;
-            blasterPriceText.text = "" + blasterPrice * 25;
             amountOfUpgrades.text = "X25";
             return 25;
         }
@@ -180,14 +189,12 @@ public class Shop : MonoBehaviour
         {
             //x1 = true; x25 = true; x50 = true; x100 = false; max = true;
             amountOfUpgrades.text = "X50";
-            blasterPriceText.text = "" + blasterPrice * 50;
             return 50;
         }
         else if (!x100)
         {
             //x1 = true; x25 = true; x50 = true; x100 = true; max = false;
             amountOfUpgrades.text = "X100";
-            blasterPriceText.text = "" + blasterPrice * 100;
             return 100;
         }
         else if (!max)
@@ -195,24 +202,56 @@ public class Shop : MonoBehaviour
             //x1 = false; x25 = true; x50 = true; x100 = true; max = true;
             amountOfUpgrades.text = "MAX";
 
-            if (blasterPrice * (GameData.instance.saveData.coins / blasterPrice) <= 0)
+            if (unitPrcie * (GameData.instance.saveData.coins / unitPrcie) <= 0)
             {
-                blasterPriceText.text = "" + GameData.instance.saveData.blasterPrice;
-                return GameData.instance.saveData.blasterPrice;
+                return 1;
             }
             else
             {
-                blasterPriceText.text = "" + blasterPrice * (GameData.instance.saveData.coins / blasterPrice);
-                return GameData.instance.saveData.coins / blasterPrice;
+                return GameData.instance.saveData.coins / unitPrcie;
             }
         }
         else
         {
             //x1 = true; x25 = false; x50 = true; x100 = true; max = true;
             amountOfUpgrades.text = "X1";
-            blasterPriceText.text = "" + blasterPrice * 1;
             return 1;
         }
+
+    }
+
+    void BlasterPriceOfupdate()
+    {
+        blasterPriceText.text = "" + blasterPrice * AmountOfUpgrades(GameData.instance.saveData.blasterPrice);
+    }
+
+    private void ManagerAmountOfUpgrades()
+    {
+        for (int i = 0; i < managerArray.Length; i++)
+        {
+            managerArray[i].GetComponent<Manager>().managerPrice.text = "" + managerArray[i].GetComponent<Manager>().thisManagerPrice * AmountOfUpgrades(managerArray[i].GetComponent<Manager>().thisManagerPrice);
+        }
+        //Manager.instance.managerPrice.text = "" + Manager.instance.thisManagerPrice * AmountOfUpgrades(Manager.instance.thisManagerPrice);
+    }
+
+    public void ManagerCheckForInteractable()
+    {
+        for (int i = 0; i < managerArray.Length; i++)
+        {
+            Manager manager = managerArray[i].GetComponent<Manager>();
+            if (manager.managerButton != null)
+            {
+                if (GameData.instance.saveData.coins >= manager.thisManagerPrice * Shop.instance.AmountOfUpgrades(manager.thisManagerPrice))
+                {
+                    manager.managerButton.interactable = true;
+                }
+                else
+                {
+                    manager.managerButton.interactable = false;
+                }
+            }
+        }
+
     }
 
     private void ManagerInstantiation()
@@ -221,12 +260,14 @@ public class Shop : MonoBehaviour
         foreach (var manager in Manager.instance.managers)
         {
             GameObject newManager = Instantiate(managerPrefab, managerSection.transform) as GameObject;
+            Manager.instance.SavingManagerInfo(managerNumber);
             if (GameData.instance != null)
             {
                 Manager.instance.LoadManagerInfo(managerNumber);
             }
             Manager.instance.ColecktingManagerInfo(managerNumber);
             Manager.instance.managerNumber = managerNumber;
+            managerArray[managerNumber] = newManager;
             managerNumber++;
 
         }

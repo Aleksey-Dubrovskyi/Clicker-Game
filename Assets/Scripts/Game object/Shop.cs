@@ -50,18 +50,18 @@ public class Shop : MonoBehaviour
     {
         shopAnim = ShopWindow.GetComponent<Animator>();
         x1 = false; x25 = true; x50 = true; x100 = true; max = true;
-        blasterLvlText.text = "LVL: " + GameData.instance.saveData.blasterLvl.ToString();
+        blasterLvlText.text = "LVL: " + AbreviationManager.AbbreviateNumber(GameData.instance.saveData.blasterLvl);
         managerArray = new GameObject[Manager.instance.managers.Length];
         ManagerInstantiation();
         if (DamageManager.instance != null)
         {
-            clickDamage.text = GameData.instance.saveData.clickDamage.ToString() + "Click damage";
-            autoDamage.text = GameData.instance.saveData.autoDamage.ToString() + "DPS";
+            clickDamage.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.clickDamage) + " Click damage";
+            autoDamage.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.autoDamage) + " DPS";
             blasterLvl = GameData.instance.saveData.blasterLvl;
             GameData.instance.saveData.blasterDamage = blasterLvl;
-            blasterDamageText.text = GameData.instance.saveData.blasterDamage.ToString();
+            blasterDamageText.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.blasterDamage);
             blasterPrice = GameData.instance.saveData.blasterPrice;
-            blasterPriceText.text = blasterPrice.ToString();
+            blasterPriceText.text = AbreviationManager.AbbreviateNumber(blasterPrice);
         }
 
         if (blasterLvl <= 0)
@@ -78,6 +78,8 @@ public class Shop : MonoBehaviour
 
     public void OnShop()
     {
+        if (SFXManager.instance.isActiveAndEnabled)
+            SFXManager.instance.PlaySFX(Clip.Click);
         CheckForInteractable();
         ManagerCheckForInteractable();
         if (isOpen == false)
@@ -96,6 +98,8 @@ public class Shop : MonoBehaviour
     {
         if (CheckForInteractable())
         {
+            if (SFXManager.instance.isActiveAndEnabled)
+                SFXManager.instance.PlaySFX(Clip.Click);
             blasterButton.interactable = true;
             BlasterUpgrade(AmountOfUpgrades(blasterPrice));
             GameManager.instance.CoinsUpdate();
@@ -108,7 +112,7 @@ public class Shop : MonoBehaviour
         float percentToAdd = 0;
         blasterButtonText.text = "Upgrade";
         blasterLvl += 1 * ammountOfUpgrades;
-        blasterLvlText.text = "LVL: " + blasterLvl.ToString();
+        blasterLvlText.text = "LVL: " + AbreviationManager.AbbreviateNumber(blasterLvl);
         blasterPrice *= ammountOfUpgrades;
         GameManager.instance.coins -= blasterPrice;
         GameData.instance.saveData.coins = GameManager.instance.coins;
@@ -119,13 +123,13 @@ public class Shop : MonoBehaviour
             blasterPrice += Mathf.CeilToInt(percentToAdd);
         }
         GameData.instance.saveData.blasterPrice = blasterPrice;
-        blasterPriceText.text = GameData.instance.saveData.blasterPrice.ToString();
+        blasterPriceText.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.blasterPrice);
         GameData.instance.saveData.blasterDamage = blasterLvl;
-        blasterDamageText.text = GameData.instance.saveData.blasterDamage.ToString();
+        blasterDamageText.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.blasterDamage);
         DamageManager.instance.clickDamage = GameData.instance.saveData.blasterDamage;
         GameData.instance.saveData.clickDamage = DamageManager.instance.clickDamage;
-        clickDamage.text = DamageManager.instance.clickDamage.ToString() + " Click damage";
-        DamageManager.instance.clickDamageInfo.text = GameData.instance.saveData.blasterDamage.ToString();
+        clickDamage.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.clickDamage) + " Click damage";
+        DamageManager.instance.clickDamageInfo.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.blasterDamage);
         GameData.instance.saveData.blasterLvl = blasterLvl;
     }
 
@@ -145,7 +149,8 @@ public class Shop : MonoBehaviour
 
     public void OnAmountButton()
     {
-
+        if (SFXManager.instance.isActiveAndEnabled)
+            SFXManager.instance.PlaySFX(Clip.Click);
         if (!x25)
         {
             x1 = true; x25 = true; x50 = false; x100 = true; max = true;
@@ -220,16 +225,16 @@ public class Shop : MonoBehaviour
 
     }
 
-    void BlasterPriceOfupdate()
+    private void BlasterPriceOfupdate()
     {
-        blasterPriceText.text = "" + blasterPrice * AmountOfUpgrades(GameData.instance.saveData.blasterPrice);
+        blasterPriceText.text = AbreviationManager.AbbreviateNumber(blasterPrice * AmountOfUpgrades(GameData.instance.saveData.blasterPrice));
     }
 
     private void ManagerAmountOfUpgrades()
     {
         for (int i = 0; i < managerArray.Length; i++)
         {
-            managerArray[i].GetComponent<Manager>().managerPrice.text = "" + managerArray[i].GetComponent<Manager>().thisManagerPrice * AmountOfUpgrades(managerArray[i].GetComponent<Manager>().thisManagerPrice);
+            managerArray[i].GetComponent<Manager>().managerPrice.text = AbreviationManager.AbbreviateNumber(managerArray[i].GetComponent<Manager>().thisManagerPrice * AmountOfUpgrades(managerArray[i].GetComponent<Manager>().thisManagerPrice));
         }
         //Manager.instance.managerPrice.text = "" + Manager.instance.thisManagerPrice * AmountOfUpgrades(Manager.instance.thisManagerPrice);
     }

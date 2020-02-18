@@ -224,5 +224,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   planetNumberText: {fileID: 1618043257059227224}
-  planetSprite: {fileID: 0}
+  planetSprite: {fileID: 1095573800834144694, guid: abfdc6f56324b594699bc3301ee6af84,
+    type: 3}
   planetNumber: 0

@@ -13,6 +13,7 @@ public class SaveData
     public int blasterPrice;
     public int blasterDamage;
     public int currentLvl;
+    public bool firstLaunch;
     //public bool[] blasterActiveUpgrades;
     public bool[] lvlCompleted;
     public bool[] activeManagers;
@@ -22,7 +23,6 @@ public class SaveData
     public int[] managerDamage;
     //public int[] managerUpgrades;
     public int[] kiledEnemys;
-    //public GameObject[] planetPrefab;
 }
 
 public class GameData : MonoBehaviour
@@ -76,22 +76,23 @@ public class GameData : MonoBehaviour
         else
         {
             saveData = new SaveData();
-            saveData.activeManagers = new bool[100];
+            saveData.activeManagers = new bool[10];
             saveData.autoDamage = 0;
             //saveData.blasterActiveUpgrades = new bool[100];
-            saveData.blasterDamage = 0;
-            saveData.blasterLvl = 0;
+            saveData.blasterDamage = 1;
+            saveData.blasterLvl = 1;
             saveData.clickDamage = 1;
             saveData.coins = 0;
-            saveData.lvlCompleted = new bool[100];
+            saveData.lvlCompleted = new bool[1000000000];
             saveData.planetNumber = new int[saveData.lvlCompleted.Length];
             //saveData.managerUpgrades = new int[100];
             saveData.blasterPrice = 5;
-            saveData.managerPrice = new int[100];
-            saveData.managerLvl = new int[100];
-            saveData.managerDamage = new int[100];
-            saveData.currentLvl = 0;
-            //saveData.planetPrefab = new GameObject[100];
+            saveData.managerPrice = new int[10];
+            saveData.managerLvl = new int[10];
+            saveData.managerDamage = new int[10];
+            saveData.currentLvl = 1;
+            saveData.firstLaunch = true;
+            saveData.kiledEnemys = new int[saveData.lvlCompleted.Length];
         }
     }
 }

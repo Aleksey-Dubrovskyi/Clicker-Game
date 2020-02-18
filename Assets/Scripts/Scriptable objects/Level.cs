@@ -17,6 +17,7 @@ public class LevelInfo
     public Sprite[] enemySprites;
     public Sprite[] levelBosses;
     public Sprite planetSprite;
+    public Sprite planetBacground;
 }
 
 public enum EnemyType

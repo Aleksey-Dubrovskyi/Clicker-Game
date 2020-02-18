@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ad876ba8d11efe499c5848cddad9279, type: 3}
+  m_Name: Level Andromeda
+  m_EditorClassIdentifier: 
+  levelInfo:
+    levelName: Andromeda
+    enemyType: 0
+    enemyHP: 10
+    enemySprites:
+    - {fileID: 683520168947253234, guid: 144300709f0f879408fc90b4106023b6, type: 3}
+    - {fileID: 2337969071395386715, guid: 144300709f0f879408fc90b4106023b6, type: 3}
+    - {fileID: -3113520530484580786, guid: 144300709f0f879408fc90b4106023b6, type: 3}
+    - {fileID: -3864482298153897734, guid: 144300709f0f879408fc90b4106023b6, type: 3}
+    levelBosses:
+    - {fileID: 9181034661916361366, guid: 144300709f0f879408fc90b4106023b6, type: 3}
+    - {fileID: -8919208680820184676, guid: 144300709f0f879408fc90b4106023b6, type: 3}
+    planetSprite: {fileID: -4567166467494461625, guid: abfdc6f56324b594699bc3301ee6af84,
+      type: 3}
+    planetBacground: {fileID: 21300000, guid: cfe32801680192642995f4f96ae1bf10, type: 3}

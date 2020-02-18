@@ -31,10 +31,10 @@ public class Manager : MonoBehaviour
     public Text managerName;
     public Text managerLvl;
     [SerializeField]
-    int thisManagerLvl;
+    private int thisManagerLvl;
     public Text managerDps;
     [SerializeField]
-    int thisManagerDPS;
+    private int thisManagerDPS;
     public Text managerPrice;
     [SerializeField]
     public int thisManagerPrice;
@@ -59,11 +59,11 @@ public class Manager : MonoBehaviour
     public void ColecktingManagerInfo(int managerNumber)
     {
         managerName.text = managers[managerNumber].managerName;
-        managerPrice.text = GameData.instance.saveData.managerPrice[managerNumber].ToString();
-        managerLvl.text = "LVL: " + managers[managerNumber].managerLvl.ToString();
-        managerDps.text = GameData.instance.saveData.managerDamage[managerNumber] + " DPS";
+        managerPrice.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.managerPrice[managerNumber]);
+        managerLvl.text = "LVL: " + AbreviationManager.AbbreviateNumber(managers[managerNumber].managerLvl);
+        managerDps.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.managerDamage[managerNumber]) + " DPS";
         managerImage.sprite = managers[managerNumber].managerSprite;
-        Shop.instance.autoDamage.text = GameData.instance.saveData.autoDamage.ToString() + " DPS";
+        Shop.instance.autoDamage.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.autoDamage) + " DPS";
     }
 
     public void SavingManagerInfo(int managerNumber)
@@ -86,6 +86,8 @@ public class Manager : MonoBehaviour
     {
         float percentToAdd = 0;
         managerButtonText.text = "Upgrade";
+        if (SFXManager.instance.isActiveAndEnabled)
+            SFXManager.instance.PlaySFX(Clip.Click);
         managers[managerNumber].managerLvl += 1 * Shop.instance.AmountOfUpgrades(managers[managerNumber].managerPrice);
         managers[managerNumber].managerPrice *= Shop.instance.AmountOfUpgrades(managers[managerNumber].managerPrice);
         int repeatNumber = Shop.instance.AmountOfUpgrades(thisManagerPrice);
@@ -96,7 +98,7 @@ public class Manager : MonoBehaviour
                 GameData.instance.saveData.autoDamage += managers[managerNumber].managerDps;
                 DamageManager.instance.autoDamage = GameData.instance.saveData.autoDamage;
                 GameData.instance.saveData.activeManagers[managerNumber] = true;
-                DamageManager.instance.autoDamageInfo.text = GameData.instance.saveData.autoDamage.ToString();
+                DamageManager.instance.autoDamageInfo.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.autoDamage);
                 DamageManager.instance.AutoDamage();
             }
             else
@@ -104,7 +106,7 @@ public class Manager : MonoBehaviour
                 managers[managerNumber].managerDps += 5;
                 GameData.instance.saveData.autoDamage += managers[managerNumber].managerDps;
                 DamageManager.instance.autoDamage = GameData.instance.saveData.autoDamage;
-                DamageManager.instance.autoDamageInfo.text = GameData.instance.saveData.autoDamage.ToString();
+                DamageManager.instance.autoDamageInfo.text = AbreviationManager.AbbreviateNumber(GameData.instance.saveData.autoDamage);
             }
             percentToAdd = ((float)managers[managerNumber].managerPrice / 100) * 7;
             managers[managerNumber].managerPrice += Mathf.CeilToInt(percentToAdd);

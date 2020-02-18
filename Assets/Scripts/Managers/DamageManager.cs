@@ -9,7 +9,7 @@ public class DamageManager : MonoBehaviour
     public int clickDamage;
     public int autoDamage;
     public int enemyHP;
-    public int damageTaked;    
+    public int damageTaked;
     public Image hPBar;
     public Text hPText;
     public Text clickDamageInfo;
@@ -40,9 +40,9 @@ public class DamageManager : MonoBehaviour
             enemyHP = GameManager.instance.currentEnemyHP;
         }
 
-        hPText.text = enemyHP.ToString();
-        clickDamageInfo.text = "" + clickDamage;
-        autoDamageInfo.text = "" + autoDamage;
+        hPText.text = AbreviationManager.AbbreviateNumber(enemyHP);
+        clickDamageInfo.text = AbreviationManager.AbbreviateNumber(clickDamage);
+        autoDamageInfo.text = AbreviationManager.AbbreviateNumber(autoDamage);
     }
 
     public void ClickDamage()
@@ -50,6 +50,8 @@ public class DamageManager : MonoBehaviour
         EnemyIsDead();
         if (GameManager.instance != null && !EnemyIsDead())
         {
+            if (SFXManager.instance.isActiveAndEnabled)
+                SFXManager.instance.PlaySFX(Clip.Shoot);
             enemyHP -= clickDamage;
             damageTaked += clickDamage;
             Enemy.instance.anim.Play("Enemy_damage");
@@ -59,9 +61,10 @@ public class DamageManager : MonoBehaviour
         }
         if (EnemyIsDead())
         {
+            //SFXManager.instance.PlaySFX(Clip.Death);
             GameManager.instance.EarningCoins();
             enemyHP = GameManager.instance.currentEnemyHP;
-            hPText.text = enemyHP.ToString();
+            hPText.text = AbreviationManager.AbbreviateNumber(enemyHP);
             damageTaked = 0;
             hPBar.fillAmount = 0;
             GameManager.instance.GenerateNewEnemy();
@@ -82,6 +85,8 @@ public class DamageManager : MonoBehaviour
             EnemyIsDead();
             if (GameManager.instance != null && !EnemyIsDead())
             {
+                if (SFXManager.instance.isActiveAndEnabled)
+                    SFXManager.instance.PlaySFX(Clip.Shoot);
                 enemyHP -= autoDamage;
                 damageTaked += autoDamage;
                 Enemy.instance.anim.Play("Enemy_damage");
@@ -91,9 +96,10 @@ public class DamageManager : MonoBehaviour
             }
             if (EnemyIsDead())
             {
+                //SFXManager.instance.PlaySFX(Clip.Death);
                 GameManager.instance.EarningCoins();
                 enemyHP = GameManager.instance.currentEnemyHP;
-                hPText.text = enemyHP.ToString();
+                hPText.text = AbreviationManager.AbbreviateNumber(enemyHP);
                 damageTaked = 0;
                 hPBar.fillAmount = 0;
                 GameManager.instance.GenerateNewEnemy();
@@ -114,7 +120,7 @@ public class DamageManager : MonoBehaviour
     {
         if (hPText != null)
         {
-            hPText.text = enemyHP.ToString();
+            hPText.text = hPText.text = AbreviationManager.AbbreviateNumber(enemyHP); ;
         }
     }
 
@@ -133,6 +139,6 @@ public class DamageManager : MonoBehaviour
     private void DamageTextAppear(int damageValue)
     {
         GameObject damage = Instantiate(damageTextPrefab, clickDamageTextContainer.transform);
-        damage.GetComponent<Text>().text = "" + damageValue;
+        damage.GetComponent<Text>().text = AbreviationManager.AbbreviateNumber(damageValue);
     }
 }

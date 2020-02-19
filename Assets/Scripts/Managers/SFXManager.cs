@@ -1,20 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public enum Clip { Shoot, Teleport, Death, Click}
+public enum Clip { Shoot, Teleport, Death, Click }
 
 public class SFXManager : MonoBehaviour
 {
     public static SFXManager instance;
-
-    AudioSource[] sfx;
+    private AudioSource[] sfx;
     // Start is called before the first frame update
     private void Awake()
     {
-        
+
     }
-    void Start()
+
+    private void Start()
     {
         instance = this;
         sfx = GetComponents<AudioSource>();
@@ -36,7 +34,7 @@ public class SFXManager : MonoBehaviour
     }
 
     public void PlaySFX(Clip audioClip)
-    {        
+    {
         sfx[(int)audioClip].Play();
     }
 }

@@ -6,21 +6,21 @@ using UnityEngine;
 [Serializable]
 public class SaveData
 {
-    public int clickDamage;
-    public int autoDamage;
-    public int coins;
+    public long clickDamage;
+    public long autoDamage;
+    public long coins;
     public int blasterLvl;
-    public int blasterPrice;
-    public int blasterDamage;
+    public long blasterPrice;
+    public long blasterDamage;
     public int currentLvl;
     public bool firstLaunch;
     //public bool[] blasterActiveUpgrades;
     public bool[] lvlCompleted;
     public bool[] activeManagers;
     public int[] planetNumber;
-    public int[] managerLvl;
-    public int[] managerPrice;
-    public int[] managerDamage;
+    public long[] managerLvl;
+    public long[] managerPrice;
+    public long[] managerDamage;
     //public int[] managerUpgrades;
     public int[] kiledEnemys;
 }
@@ -30,7 +30,7 @@ public class GameData : MonoBehaviour
     public static GameData instance;
     public SaveData saveData;
 
-    private void Start()
+    private void Awake()
     {
         if (instance == null)
         {
@@ -47,7 +47,7 @@ public class GameData : MonoBehaviour
     public void Save()
     {
         BinaryFormatter formatter = new BinaryFormatter();
-        FileStream file = File.Open(Application.persistentDataPath + "/playerData", FileMode.Create);
+        FileStream file = File.Open(Application.persistentDataPath + "/playerData", FileMode.Create, FileAccess.Write);
         SaveData data = new SaveData();
         data = saveData;
         formatter.Serialize(file, data);
@@ -69,7 +69,7 @@ public class GameData : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/playerData"))
         {
             BinaryFormatter formatter = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerData", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/playerData", FileMode.Open, FileAccess.Read);
             saveData = formatter.Deserialize(file) as SaveData;
             file.Close();
         }
@@ -83,16 +83,16 @@ public class GameData : MonoBehaviour
             saveData.blasterLvl = 1;
             saveData.clickDamage = 1;
             saveData.coins = 0;
-            saveData.lvlCompleted = new bool[1000000000];
-            saveData.planetNumber = new int[saveData.lvlCompleted.Length];
+            saveData.lvlCompleted = new bool[100];
+            saveData.planetNumber = new int[100];
             //saveData.managerUpgrades = new int[100];
             saveData.blasterPrice = 5;
-            saveData.managerPrice = new int[10];
-            saveData.managerLvl = new int[10];
-            saveData.managerDamage = new int[10];
+            saveData.managerPrice = new long[10];
+            saveData.managerLvl = new long[10];
+            saveData.managerDamage = new long[10];
             saveData.currentLvl = 1;
+            saveData.kiledEnemys = new int[100];
             saveData.firstLaunch = true;
-            saveData.kiledEnemys = new int[saveData.lvlCompleted.Length];
         }
     }
 }

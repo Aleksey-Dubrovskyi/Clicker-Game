@@ -1,16 +1,16 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class StartScreen : MonoBehaviour
 {
     [SerializeField]
-    Animator startScreenAnimator;
+    private Animator startScreenAnimator;
     [SerializeField]
-    GameObject startScreen;
-    float timeToStart;
+    private GameObject startScreen;
+    private float timeToStart;
+
     // Start is called before the first frame update
-    IEnumerator Start()
+    private IEnumerator Start()
     {
         timeToStart = 3f;
         while (timeToStart > 0)

@@ -28,7 +28,7 @@ public class Shop : MonoBehaviour
     [SerializeField]
     private Text blasterLvlText;
     [SerializeField]
-    private int blasterPrice;
+    private long blasterPrice;
     [SerializeField]
     private Text blasterPriceText;
     [SerializeField]
@@ -79,7 +79,10 @@ public class Shop : MonoBehaviour
     public void OnShop()
     {
         if (SFXManager.instance.isActiveAndEnabled)
+        {
             SFXManager.instance.PlaySFX(Clip.Click);
+        }
+
         CheckForInteractable();
         ManagerCheckForInteractable();
         if (isOpen == false)
@@ -99,7 +102,10 @@ public class Shop : MonoBehaviour
         if (CheckForInteractable())
         {
             if (SFXManager.instance.isActiveAndEnabled)
+            {
                 SFXManager.instance.PlaySFX(Clip.Click);
+            }
+
             blasterButton.interactable = true;
             BlasterUpgrade(AmountOfUpgrades(blasterPrice));
             GameManager.instance.CoinsUpdate();
@@ -107,11 +113,11 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void BlasterUpgrade(int ammountOfUpgrades)
+    public void BlasterUpgrade(long ammountOfUpgrades)
     {
         float percentToAdd = 0;
         blasterButtonText.text = "Upgrade";
-        blasterLvl += 1 * ammountOfUpgrades;
+        blasterLvl += 1 * (int)ammountOfUpgrades;
         blasterLvlText.text = "LVL: " + AbreviationManager.AbbreviateNumber(blasterLvl);
         blasterPrice *= ammountOfUpgrades;
         GameManager.instance.coins -= blasterPrice;
@@ -150,7 +156,10 @@ public class Shop : MonoBehaviour
     public void OnAmountButton()
     {
         if (SFXManager.instance.isActiveAndEnabled)
+        {
             SFXManager.instance.PlaySFX(Clip.Click);
+        }
+
         if (!x25)
         {
             x1 = true; x25 = true; x50 = false; x100 = true; max = true;
@@ -182,7 +191,7 @@ public class Shop : MonoBehaviour
         ManagerAmountOfUpgrades();
     }
 
-    public int AmountOfUpgrades(int unitPrcie)
+    public long AmountOfUpgrades(long unitPrcie)
     {
         if (!x25)
         {

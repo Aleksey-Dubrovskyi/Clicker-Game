@@ -20,7 +20,7 @@ public class TimeManager : MonoBehaviour
 
     public float GetDate()
     {
-        currentDate = DateTime.Now;
+        currentDate = DateTime.UtcNow;
 
         string tempLocation = PlayerPrefs.GetString(saveLocation, "1");
 
@@ -35,6 +35,6 @@ public class TimeManager : MonoBehaviour
 
     public void SaveDate()
     {
-        PlayerPrefs.SetString(saveLocation, DateTime.Now.ToBinary().ToString());
+        PlayerPrefs.SetString(saveLocation, DateTime.UtcNow.ToBinary().ToString());
     }
 }

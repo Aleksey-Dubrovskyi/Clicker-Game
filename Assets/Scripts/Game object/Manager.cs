@@ -5,9 +5,9 @@ using UnityEngine.UI;
 public class ManagerInfo
 {
     public string managerName;
-    public int managerLvl;
-    public int managerDps;
-    public int managerPrice;
+    public long managerLvl;
+    public long managerDps;
+    public long managerPrice;
     public Sprite managerSprite;
     //public ManagerUpgrades[] upgrades;
 }
@@ -31,13 +31,13 @@ public class Manager : MonoBehaviour
     public Text managerName;
     public Text managerLvl;
     [SerializeField]
-    private int thisManagerLvl;
+    private long thisManagerLvl;
     public Text managerDps;
     [SerializeField]
-    private int thisManagerDPS;
+    private long thisManagerDPS;
     public Text managerPrice;
     [SerializeField]
-    public int thisManagerPrice;
+    public long thisManagerPrice;
     public Text managerButtonText;
     public Button managerButton;
     public Image managerImage;
@@ -87,10 +87,13 @@ public class Manager : MonoBehaviour
         float percentToAdd = 0;
         managerButtonText.text = "Upgrade";
         if (SFXManager.instance.isActiveAndEnabled)
+        {
             SFXManager.instance.PlaySFX(Clip.Click);
+        }
+
         managers[managerNumber].managerLvl += 1 * Shop.instance.AmountOfUpgrades(managers[managerNumber].managerPrice);
         managers[managerNumber].managerPrice *= Shop.instance.AmountOfUpgrades(managers[managerNumber].managerPrice);
-        int repeatNumber = Shop.instance.AmountOfUpgrades(thisManagerPrice);
+        int repeatNumber = (int)Shop.instance.AmountOfUpgrades(thisManagerPrice);
         for (int i = 0; i < repeatNumber; i++)
         {
             if (!GameData.instance.saveData.activeManagers[managerNumber])

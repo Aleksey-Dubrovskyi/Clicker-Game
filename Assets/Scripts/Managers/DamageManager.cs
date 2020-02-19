@@ -6,10 +6,10 @@ public class DamageManager : MonoBehaviour
 {
     public static DamageManager instance;
     public World world;
-    public int clickDamage;
-    public int autoDamage;
-    public int enemyHP;
-    public int damageTaked;
+    public long clickDamage;
+    public long autoDamage;
+    public long enemyHP;
+    public long damageTaked;
     public Image hPBar;
     public Text hPText;
     public Text clickDamageInfo;
@@ -51,7 +51,10 @@ public class DamageManager : MonoBehaviour
         if (GameManager.instance != null && !EnemyIsDead())
         {
             if (SFXManager.instance.isActiveAndEnabled)
+            {
                 SFXManager.instance.PlaySFX(Clip.Shoot);
+            }
+
             enemyHP -= clickDamage;
             damageTaked += clickDamage;
             Enemy.instance.anim.Play("Enemy_damage");
@@ -86,7 +89,10 @@ public class DamageManager : MonoBehaviour
             if (GameManager.instance != null && !EnemyIsDead())
             {
                 if (SFXManager.instance.isActiveAndEnabled)
+                {
                     SFXManager.instance.PlaySFX(Clip.Shoot);
+                }
+
                 enemyHP -= autoDamage;
                 damageTaked += autoDamage;
                 Enemy.instance.anim.Play("Enemy_damage");
@@ -136,7 +142,7 @@ public class DamageManager : MonoBehaviour
         }
     }
 
-    private void DamageTextAppear(int damageValue)
+    private void DamageTextAppear(long damageValue)
     {
         GameObject damage = Instantiate(damageTextPrefab, clickDamageTextContainer.transform);
         damage.GetComponent<Text>().text = AbreviationManager.AbbreviateNumber(damageValue);

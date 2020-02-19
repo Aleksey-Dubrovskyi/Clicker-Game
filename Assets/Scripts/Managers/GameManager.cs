@@ -1,7 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System;
 
 public enum Animations
 {
@@ -20,13 +20,13 @@ public class GameManager : MonoBehaviour
     private GameObject[] planetsArray;
     [Header("Offline profit")]
     [SerializeField]
-    float timeOffline;
+    private float timeOffline;
     [SerializeField]
-    Text timeOfflineText;
+    private Text timeOfflineText;
     [SerializeField]
-    Text offlineProfitText;
+    private Text offlineProfitText;
     [SerializeField]
-    Animator offlineProfit;
+    private Animator offlineProfit;
     [Header("Level info")]
     public int levelNumber;
     public int localLvlNumber;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Image currentPlanetSprite;
     [SerializeField]
-    Image currentBackgroundSprite;
+    private Image currentBackgroundSprite;
     [SerializeField]
     private GameObject planetContainer;
     [SerializeField]
@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     [Header("Coin section")]
     [SerializeField]
     private Text coinText;
-    public int coins;
+    public long coins;
     [SerializeField]
     private Animator coinAnimation;
 
@@ -70,7 +70,7 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         enemyNeeded = 10;
-        localLvlNumber = PlanetPrefab.instance.planetNumber;
+        localLvlNumber = GameData.instance.saveData.currentLvl;
         if (world != null)
         {
             if (world.levels[levelNumber] != null)
@@ -100,7 +100,7 @@ public class GameManager : MonoBehaviour
         coinText.text = AbreviationManager.AbbreviateNumber(coins);
         StartNewPlanetInstantiation();
         GenerateNewEnemy();
-        if (TimeManager.instance != null)
+        if (TimeManager.instance != null && GameData.instance.saveData.firstLaunch == false)
         {
             timeOffline = TimeManager.instance.GetDate();
             var ts = TimeSpan.FromSeconds(timeOffline);
@@ -155,7 +155,10 @@ public class GameManager : MonoBehaviour
         enemyKiledText.text = GameData.instance.saveData.kiledEnemys[localLvlNumber - 1] + " / " + enemyNeeded;
         enemyAnimation.Play(Animations.Enemy_appear.ToString());
         if (SFXManager.instance.isActiveAndEnabled)
+        {
             SFXManager.instance.PlaySFX(Clip.Teleport);
+        }
+
         teleportAnimation.Play(Animations.Teleportation.ToString());
         enemy.sprite = EnemyViewGenerator();
         enemyName.text = currentEnemySprite.name + ", lvl " + (localLvlNumber);
@@ -172,7 +175,10 @@ public class GameManager : MonoBehaviour
     {
         enemyAnimation.Play(Animations.Enemy_appear.ToString());
         if (SFXManager.instance.isActiveAndEnabled)
+        {
             SFXManager.instance.PlaySFX(Clip.Teleport);
+        }
+
         teleportAnimation.Play(Animations.Teleportation.ToString());
         enemy.sprite = BossViewGenerator();
         enemyName.text = currentEnemySprite.name + ", lvl " + (localLvlNumber);
@@ -211,12 +217,12 @@ public class GameManager : MonoBehaviour
         Shop.instance.PriceUpdate();
     }
 
-    int OfflineEarningCoins()
+    private int OfflineEarningCoins()
     {
         int earnedCoins = 0;
         if (GameData.instance.saveData.autoDamage != 0)
         {
-            if (timeOffline < 86400 && GameData.instance.saveData.firstLaunch == false && timeOffline > (currentEnemyHP / GameData.instance.saveData.autoDamage))
+            if (timeOffline < 86400 && timeOffline > (currentEnemyHP / GameData.instance.saveData.autoDamage))
             {
                 float secondsToOneEnemy = currentEnemyHP / GameData.instance.saveData.autoDamage;
                 float killedEnemys = timeOffline / Mathf.CeilToInt(secondsToOneEnemy);
@@ -230,7 +236,7 @@ public class GameManager : MonoBehaviour
                 return 0;
             }
         }
-        if (GameData.instance.saveData.clickDamage != 0)
+        if (GameData.instance.saveData.clickDamage != 0 && timeOffline > (currentEnemyHP / GameData.instance.saveData.clickDamage))
         {
             float secondsToOneEnemy = currentEnemyHP / GameData.instance.saveData.clickDamage;
             float killedEnemys = timeOffline / Mathf.CeilToInt(secondsToOneEnemy);
@@ -318,7 +324,10 @@ public class GameManager : MonoBehaviour
     public void OKbutton()
     {
         if (SFXManager.instance.isActiveAndEnabled)
+        {
             SFXManager.instance.PlaySFX(Clip.Click);
+        }
+
         offlineProfit.Play(Animations.Profit_Window_dissappear.ToString());
         offlineProfit.SetBool("isOpen", false);
     }
